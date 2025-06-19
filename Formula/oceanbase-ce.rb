@@ -12,7 +12,7 @@ class OceanbaseCe < Formula
     end
 
     bin.install "src/oceanbase-ce.sh" => "oceanbase-ce"
-    system "docker", "pull", "oceanbase-ce"
+    system "docker", "pull", "quay.io/oceanbase/oceanbase-ce"
   end
 
   def test
