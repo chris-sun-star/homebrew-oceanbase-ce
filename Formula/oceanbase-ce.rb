@@ -8,8 +8,12 @@ class OceanbaseCe < Formula
   def install
     ENV.prepend_path "PATH", "/usr/local/bin"
     bin.install "src/oceanbase-ce.sh" => "oceanbase-ce"
-    chmod 0755, bin/'oceanbase-ce'
     system "docker", "pull", "oceanbase/oceanbase-ce"
+  end
+
+  def post_install
+    chmod 0755, bin/'oceanbase-ce'
+    puts "Permissions set to 0755 for #{bin/'oceanbase-ce'}"
   end
 
   def test
