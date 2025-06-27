@@ -6,11 +6,13 @@ class OceanbaseCe < Formula
   license "Apache-2.0"
 
   def install
+    ENV.prepend_path "PATH", "/usr/local/bin"
     bin.install "src/oceanbase-ce.sh" => "oceanbase-ce"
     system "docker", "pull", "quay.io/oceanbase/oceanbase-ce"
   end
 
   def test
+    ENV.prepend_path "PATH", "/usr/local/bin"
     system "oceanbase-ce", "-h"
   end
 end
