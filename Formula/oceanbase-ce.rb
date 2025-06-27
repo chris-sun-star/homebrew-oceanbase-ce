@@ -6,11 +6,6 @@ class OceanbaseCe < Formula
   license "Apache-2.0"
 
   def install
-    unless system("which docker >/dev/null 2>&1")
-      opoo "Docker is not installed or not in PATH. Please install Docker before proceeding."
-      exit 1
-    end
-
     bin.install "src/oceanbase-ce.sh" => "oceanbase-ce"
     system "docker", "pull", "quay.io/oceanbase/oceanbase-ce"
   end
