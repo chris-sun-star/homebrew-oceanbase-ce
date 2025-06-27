@@ -15,4 +15,9 @@ class OceanbaseCe < Formula
     ENV.prepend_path "PATH", "/usr/local/bin"
     system "oceanbase-ce", "-h"
   end
+
+  def post_uninstall
+    ENV.prepend_path "PATH", "/usr/local/bin"
+    system "docker", "rm", "-f", "oceanbase-ce"
+  end
 end
