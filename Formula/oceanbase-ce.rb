@@ -1,8 +1,8 @@
 class OceanbaseCe < Formula
   desc "A wrapper to run oceanbase-ce using docker containers"
   homepage "https://github.com/chris-sun-star/oceanbase-ce"
-  url "https://github.com/chris-sun-star/oceanbase-ce/archive/refs/tags/v0.0.1.tar.gz"
-  sha256 "ac20bcd6c9dc593ea07287f78dec31241bca00c7b1914c22af7c9f95e5534e2e"
+  url "https://github.com/chris-sun-star/homebrew-oceanbase-ce/archive/refs/tags/v0.0.2.tar.gz"
+  sha256 "0f36cd48a4d103b62f27b4364ebd3b4c35a8c4a1cb232d421f0c525b4abc6886"
   license "Apache-2.0"
 
   def install
