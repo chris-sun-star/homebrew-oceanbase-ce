@@ -35,7 +35,7 @@ start_run() {
         echo "Creating and starting new container oceanbase-ce..."
         mkdir -p ~/.oceanbase-ce/data/ob
         mkdir -p ~/.oceanbase-ce/data/.obd/obcluster
-        docker run -p 2881:2881 -p 2886:2886 --name oceanbase-ce -e OB_SERVER_IP=127.0.0.1 -v ~/.oceanbase-ce/data/ob:/root/ob -v ~/.oceanbase-ce/data/.obd/cluster:/root/.obd/cluster -d oceanbase/oceanbase-ce
+        docker run -p 2881:2881 -p 2886:2886 --name oceanbase-ce -e OB_SERVER_IP=127.0.0.1 -e OB_CLUSTER_NAME='OBCE_DESKTOP' -v ~/.oceanbase-ce/data/ob:/root/ob -v ~/.oceanbase-ce/data/.obd/cluster:/root/.obd/cluster -d quay.io/oceanbase/oceanbase-ce
     fi
     echo "Container started, you can check the start process with command 'docker logs oceanbase-ce'"
 }
